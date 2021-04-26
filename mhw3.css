@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+header {
+    background-image: url("header-cover.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+    color: white;
+    position: relative;
+    font-family:  'IBM Plex Sans', sans-serif;
+    margin-bottom: 30px;
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 40vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    height: 8vh;
+    position: relative;
+    top: 5px;
+    z-index: 3;
+}
+
+.flex-item {
+    background-color: rgba(200, 210, 255, 0.4);
+    padding: 3px 15px;
+    border: 2px solid rgb(177, 177, 177);
+    border-radius: 50px;
+    font-size: 2em;
+}
+
+.selected {
+    background-color: black;
+}
+.flex-item:hover{
+    cursor: pointer;
+}
+
+#menu {
+    display: none;
+}
+
+#intestazione {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(40vh - 8vh);
+    font-weight: bold;
+    font-size: 5em;
+}  
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+h3 {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contenuto {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    max-width: 300px;
+    padding: 40px 40px;
+    margin-bottom: 30px;
+    background-color: rgb(80, 80, 80);
+    font-size: 1.5em;
+}
+
+.contenuto img {
+    width: 100%;
+}
+
+.titolo, .contenuto ol {
+    font-size: 0.7em;
+}
+
+span:hover {
+    cursor: default;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+
+@media (max-width: 550px) {
+    article span {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 550px) {
+    .flex-item {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        right: 10px;
+    }
+
+    #menu div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+    }
+}
